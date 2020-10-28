@@ -13,25 +13,20 @@ public class Hybrid {
         String operand1 = s.next();
         String operator = s.next();
         String operand2 = s.next();
-        int num1 = Integer.parseInt(operand1);
-        int num2 = Integer.parseInt(operand2);
-        int answer = 0;
-        if (num1 >= 1 && num1 <= 10 && num2 >= 1 && num2 <= 10) {
-            if (operator.equals("+")) {
-                answer = num1 + num2;
-            } else if (operator.equals("-")) {
-                answer = num1 - num2;
-            } else if (operator.equals("/")) {
-                answer = num1 / num2;
-            } else if (operator.equals("*")) {
-                answer = num1 * num2;
-            } else {
-                System.out.println("Задана неверная операция!");
-            }
-        }
 
-        else {
+        int a = Integer.parseInt(operand1);
+        int b = Integer.parseInt(operand2);
+        int answer = 0;
+        if (a < 1 || a > 10 || b < 1 || b > 10) {
             System.out.println("Задано неверное число!");
+        } else {
+            switch (operator) {
+                case "+" -> answer = a + b;
+                case "-" -> answer = a - b;
+                case "/" -> answer = a / b;
+                case "*" -> answer = a * b;
+                default -> System.out.println("Задана неверная операция!");
+            }
         }
         System.out.println("Output: ");
         return answer;
