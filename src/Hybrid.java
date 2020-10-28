@@ -4,11 +4,11 @@ public class Hybrid {
     public static void main(String[] args){
         Scanner s = new Scanner(System.in);
         System.out.println("Input: ");
-        String userResponse = s.nextLine();
-        System.out.println(produceAnswer(userResponse));
+        String userInput = s.nextLine();
+        System.out.println(Answer(userInput));
     }
 
-    public static int produceAnswer(String input) {
+    public static int Answer(String input) {
         Scanner s = new Scanner(input);
         String operand1 = s.next();
         String operator = s.next();
@@ -26,7 +26,7 @@ public class Hybrid {
             } else if (operator.equals("*")) {
                 answer = num1 * num2;
             } else {
-                System.out.println("Задан неверный параметр!");
+                System.out.println("Задана неверная операция!");
             }
         }
 
