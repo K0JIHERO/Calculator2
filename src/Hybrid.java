@@ -1,21 +1,25 @@
 import java.util.Scanner;
 
 public class Hybrid {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("Input: ");
         String userInput = s.nextLine();
-        System.out.println(Answer(userInput));
+
+        System.out.println(Solution(userInput));
     }
 
-    public static int Answer(String input) {
+    public static int Solution(String input) {
         Scanner s = new Scanner(input);
+
         String operand1 = s.next();
         String operator = s.next();
         String operand2 = s.next();
 
+
         int a = Integer.parseInt(operand1);
         int b = Integer.parseInt(operand2);
+
         int answer = 0;
         if (a < 1 || a > 10 || b < 1 || b > 10) {
             System.out.println("Задано неверное число!");
@@ -32,5 +36,6 @@ public class Hybrid {
         return answer;
 
     }
+
 }
 
