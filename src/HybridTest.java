@@ -5,7 +5,7 @@ public class HybridTest {
 
         int a;
         int b;
-        int answer = 0;
+        int answer;
 
         Scanner s = new Scanner(System.in);
         System.out.println("Input: ");
@@ -23,15 +23,22 @@ public class HybridTest {
                     System.out.println("Задано неверное число!");
                 }
                 else {
-                    switch (operator) {
-                        case "+" -> answer = a + b;
-                        case "-" -> answer = a - b;
-                        case "/" -> answer = a / b;
-                        case "*" -> answer = a * b;
-                        default -> System.out.println("Задана неверная операция!");
+                    if ("+".equals(operator)) {
+                        answer = a + b;
+                        System.out.println("Output:\n" + answer);
+                    } else if ("-".equals(operator)) {
+                        answer = a - b;
+                        System.out.println("Output:\n" + answer);
+                    } else if ("/".equals(operator)) {
+                        answer = a / b;
+                        System.out.println("Output:\n" + answer);
+                    } else if ("*".equals(operator)) {
+                        answer = a * b;
+                        System.out.println("Output:\n" + answer);
+                    } else {
+                        System.out.println("Задана неверная операция!");
                     }
-                    System.out.println("Output: ");
-                    System.out.println(answer);
+
                 }
 
             } catch (NumberFormatException ne) {
@@ -42,19 +49,20 @@ public class HybridTest {
                     System.out.println("Задано неверное число!");
                 }
                 else {
-                    switch (operator) {
-                        case "+" -> answer = a + b;
-                        case "-" -> answer = a - b;
-                        case "/" -> answer = a / b;
-                        case "*" -> answer = a * b;
-                        default -> System.out.println("Задана неверная операция!");
-                    }
-                    System.out.println("Output: ");
-                    if (answer == 0){
-                        System.out.println(answer);
-                    }
-                    else {
-                        System.out.println(RomanNumeral.arabicToRoman(answer));
+                    if ("+".equals(operator)) {
+                        answer = a + b;
+                        System.out.println("Output:\n" + RomanNumeral.arabicToRoman(answer));
+                    } else if ("-".equals(operator)) {
+                        answer = a - b;
+                        System.out.println("Output:\n" + RomanNumeral.arabicToRoman(answer));
+                    } else if ("/".equals(operator)) {
+                        answer = a / b;
+                        System.out.println("Output:\n" + RomanNumeral.arabicToRoman(answer));
+                    } else if ("*".equals(operator)) {
+                        answer = a * b;
+                        System.out.println("Output:\n" + RomanNumeral.arabicToRoman(answer));
+                    } else {
+                        System.out.println("Задана неверная операция!");
                     }
                 }
             }
