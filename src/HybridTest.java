@@ -50,7 +50,12 @@ public class HybridTest {
                         default -> System.out.println("Задана неверная операция!");
                     }
                     System.out.println("Output: ");
-                    System.out.println(RomanNumeral.arabicToRoman(answer));
+                    if (answer == 0){
+                        System.out.println(answer);
+                    }
+                    else {
+                        System.out.println(RomanNumeral.arabicToRoman(answer));
+                    }
                 }
             }
         }
